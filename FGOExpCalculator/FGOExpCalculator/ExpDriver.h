@@ -1,9 +1,9 @@
 #pragma once
 #include <vector>
 #include "HeroSpirit.h"
+#include "ExpTask.h"
 
 class IFoodNumStrategy;
-class ExpTask;
 
 class ExpDriver {
 private:
@@ -11,7 +11,7 @@ private:
   const int numTaskTrials;
   std::vector<ExpTask> tasks;
 public:
-  ExpDriver(int numTaskTrials, std::vector<IFoodNumStrategy> &strategies);
+  ExpDriver(int numTaskTrials, std::vector<IFoodNumStrategy*> &strategies);
   void reset();
   void run();
 };

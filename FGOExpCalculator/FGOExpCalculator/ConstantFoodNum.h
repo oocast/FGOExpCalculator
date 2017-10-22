@@ -1,8 +1,10 @@
 #pragma once
 #include "IFoodNumStrategy.h"
-class ConstantFoodNum : IFoodNumStrategy {
+class ConstantFoodNum : public IFoodNumStrategy {
 private:
-  int foodNum;
+  const int foodNum;
 public:
   ConstantFoodNum(int foodNum);
+  int getFoodNum();
+  std::string toString();
 };
