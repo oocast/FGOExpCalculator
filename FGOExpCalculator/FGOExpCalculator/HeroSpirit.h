@@ -5,8 +5,10 @@ private:
   int level;
   int experience;
 public:
+  HeroSpirit();
   void addExp(int exp);
   int getFeedPrice(int numFood);
+  int getLevelUpExp();
   void reset();
   int getLevel();
 };
