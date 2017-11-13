@@ -4,12 +4,17 @@ class IFoodNumStrategy;
 
 class ExpTask {
 private:
-  const HeroSpirit &target;
+  HeroSpirit &target;
   IFoodNumStrategy *foodNumStrategy;
+  int totalPrice;
+  int totalFood;
+  int totalGreatSuc;
+  int totalSuperSuc;
   void log();
   void feed();
 public:
-  ExpTask(IFoodNumStrategy *foodNumStrategy, const HeroSpirit &target);
+  ExpTask(HeroSpirit &target);
   void reset();
+  void changeStrategy(IFoodNumStrategy *newStrategy);
   void run();
 };

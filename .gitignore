@@ -46,4 +46,16 @@ Network Trash Folder
 Temporary Items
 .apdisk
 *.ilk
-FGOExpCalculator/.vs/FGOExpCalculator/v14/.suo
+*.suo
+*.pdb
+*.sln
+*.exe
+*.obj
+*.log
+*.lastbuildstate
+*.tlog
+*.idb
+*.vcxproj
+*.opendb
+*.db
+*.filters

@@ -7,8 +7,11 @@ private:
 public:
   HeroSpirit();
   void addExp(int exp);
-  int getFeedPrice(int numFood);
-  int getLevelUpExp();
+  int getFeedPrice(int numFood) const;
+  int getLevelUpExp() const;
+  int getLevelUpExpDiff() const;
+  bool levelUpToCap() const;
   void reset();
-  int getLevel();
+  int getLevel() const;
+  bool levelIsFull() const;
 };

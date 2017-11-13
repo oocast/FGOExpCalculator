@@ -5,17 +5,16 @@
 
 ExpDriver::ExpDriver(int numTaskTrials, std::vector<IFoodNumStrategy*> &strategies) :
   numTaskTrials(numTaskTrials),
-  tasks(std::vector<ExpTask>()),
-  target(HeroSpirit()){
-  for (int i = 0; i < strategies.size(); i++) {
-    tasks.push_back(ExpTask(strategies[i], target));
-  }
+  target(HeroSpirit()),
+  strategies(strategies),
+  task(target){
 }
 
 void ExpDriver::run() {
   std::cout << "Running the drive" << std::endl;
-  for each (auto task in tasks)
+  for each (auto strategy in strategies)
   {
+    task.changeStrategy(strategy);
     for (int i = 0; i < numTaskTrials; i++) {
       task.run();
       task.reset();
